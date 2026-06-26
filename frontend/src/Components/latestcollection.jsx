@@ -76,12 +76,21 @@ function latestcollection() {
 
   const [latestproduct, setlatestproduct] = useState([])
 
-  useEffect(() => {
-    if (Array.isArray(products)) {
-      setlatestproduct(products.slice(0, 2))
-    }
-  }, [products])
+  // useEffect(() => {
+  //   if (Array.isArray(products)) {
+  //     setlatestproduct(products.slice(0, 2))
+  //   }
+  // }, [products])
 
+  useEffect(() => {
+  if (Array.isArray(products)) {
+    // Newest products pehle aaye isliye sort karo (agar backend se nahi aa raha)
+    const sorted = [...products].sort((a, b) => 
+      new Date(b.createdAt) - new Date(a.createdAt)
+    );
+    setlatestproduct(sorted.slice(0, 4)); // 4 latest
+  }
+}, [products])
   return (
     <div>
       <div className='h-[8%] w-[100%] text-center md:mt-[50px]'>

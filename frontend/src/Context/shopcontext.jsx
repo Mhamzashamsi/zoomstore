@@ -760,6 +760,7 @@ function ShopContext({ children }) {
         try {
             const result = await axios.get(serverurl + "/api/product/list")
             setproducts(result.data)
+            
         } catch (error) {
             console.log("get product error", error)
         }
