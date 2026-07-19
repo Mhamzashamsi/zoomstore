@@ -1,6 +1,6 @@
 import React from 'react'
 import Tittle from '../Components/Tittle'
-import About from "../assets/Aboutus.jpg"
+// import About from "../assets/Aboutus.jpg"
 import Newletter from '../Components/Newletter'
 
 function about() {
@@ -12,7 +12,7 @@ function about() {
 
 <div className='lg:w-1/2 w-full flex items-center justify-center px-4'>
 
-<img src={About} alt=""   className='lg:w-[65%] w-full max-w-[400px] shadow-md shadow-black rounded-sm' />
+{/* <img src={About} alt=""   className='lg:w-[65%] w-full max-w-[400px] shadow-md shadow-black rounded-sm' /> */}
 </div>
 
 <div className='lg:w-[50%] w-[80%] flex items-start justify-center gap-[20px] flex-col mt-[20px] lg:mt-[0px]   '>
