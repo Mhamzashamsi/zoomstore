@@ -2,7 +2,7 @@ import express from 'express';
 
 import { addproduct, listproduct, removeproduct } from '../controller/productcontroler.js';
 import upload from '../middlewears/multer.js';
-import adminAuth from '../middlewears/adminAuth.js';
+import adminAuth from '../middlewears/adminauth.js';
 
 
 
