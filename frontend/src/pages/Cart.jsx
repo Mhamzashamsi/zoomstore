@@ -7,7 +7,7 @@ import Cartotal from '../Components/Cartotal';
 
 function Cart() {
   
-  const { products,currrency,cartitems,updatequantity } = useContext(shopdatacontext)
+  const { products,currency,cartitems,updatequantity } = useContext(shopdatacontext)
   const [cartdata,setcartdata] = useState([])
   const navigate = useNavigate()
   
@@ -44,6 +44,8 @@ function Cart() {
         (product) => product._id === item._id
       );
 
+      if (!productdata) return null;
+
       return (
         <div key={index}  className='w-[100%] h-[10%] border-t border-b  '>
 
@@ -54,7 +56,7 @@ function Cart() {
           <div className='flex items-start justify-center flex-col gap-[10px]    '>
 <p className='md:text-[25px] text-[20px] text-[#f3f9fc]   '> {productdata.name}  </p>
 <div className='flex items-center gap-[20px]    '>
-  <p  className='text-[20px] text-[#aaf4e7]    '>{currrency} {productdata.price}   </p>
+  <p  className='text-[20px] text-[#aaf4e7]    '>{currency} {productdata.price}   </p>
   <p className='w-[40px] h-[40px] text-[16px] text-white bg-[#518080b4] rounded-md mt-[5px] flex items-center justify-center border-[1px] border-[#9ff9f9]  '>{item.size}   </p>
 </div>
           </div>

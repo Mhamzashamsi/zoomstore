@@ -65,8 +65,12 @@ import NotFound from './pages/NotFound'
 import Ai from './Components/Ai'
 
 const App = () => {
-  let { userdata } = useContext(Userdatacontext)
+  let { userdata, loading } = useContext(Userdatacontext)
   let location = useLocation()
+
+  if (loading) {
+    return <div className="w-[100vw] h-[100vh] flex items-center justify-center bg-gradient-to-l from-[#141414] to-[#0c2025]"><div className="w-[50px] h-[50px] border-4 border-t-[#46d1f7] border-gray-500 rounded-full animate-spin"></div></div>
+  }
 
   return (
     <>

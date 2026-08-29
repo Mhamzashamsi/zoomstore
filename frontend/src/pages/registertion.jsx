@@ -336,10 +336,11 @@ import { useContext, useState } from 'react';
 import axios from 'axios';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../utiles/firebase';
+import { toast } from 'react-toastify';
 
 const Registertion = () => {
   const Navigate = useNavigate();
-  const { serverurl, setToken, setUserdata } = useContext(AuthContext);
+  const { serverurl, setToken } = useContext(AuthContext);
 
   const [show, setshow] = useState(false);
   const [name, setname] = useState("");
@@ -358,11 +359,12 @@ const Registertion = () => {
       // ✅ Token save karo
       localStorage.setItem("token", result.data.token);
       setToken(result.data.token);
-      setUserdata(result.data.user);
 
+      toast.success("Account created successfully!");
       Navigate("/");
     } catch (err) {
       console.log(err.response?.data || err.message)
+      toast.error(err.response?.data?.message || "Registration failed. Server se connect nahi ho raha.")
     }
   };
 
@@ -380,11 +382,12 @@ const Registertion = () => {
       // ✅ Token save karo
       localStorage.setItem("token", result.data.token);
       setToken(result.data.token);
-      setUserdata(result.data.user);
 
+      toast.success("Google signup successful!");
       Navigate("/");
     } catch (err) {
       console.log("Google signup failed:", err);
+      toast.error("Google signup failed. Please try again.")
     }
   };
 

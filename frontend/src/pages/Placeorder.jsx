@@ -326,50 +326,39 @@ let [loading, setloading] = useState(false)
       }
 
       switch (method) {
-
-        case 'cod':
-
-          // const result = await axios.post(
-          //   serverurl + '/api/order/placeorder',
-          //   orderdata,
-          //   { withCredentials: true }
-          // )
+        case 'cod': {
           console.log("ORDER DATA:", orderdata)
           const result = await axios.post(
-  serverurl + '/api/order/placeorder',
-  orderdata,
-  {
-    headers: {
-      token: token
-    }
-  }
-)
+            serverurl + '/api/order/placeorder',
+            orderdata,
+            {
+              headers: {
+                token: token
+              }
+            }
+          )
 
           console.log(result.data)
 
           if (result.data.success) {
-
             setcartitems({})
             toast.success("Order placed successfully")
-                        navigate("/order")
-                        setloading(false)
-
+            navigate("/order")
+            setloading(false)
           } else {
-          setloading(false)
-          toast.error("Failed to place order")
-          console.log(result.data.message)
-
+            setloading(false)
+            toast.error("Failed to place order")
+            console.log(result.data.message)
           }
           break
-
+        }
         default:
           break
       }
 
     } catch (error) {
-setloading(false)
+      setloading(false)
       console.log(error)
-
     }
   }
 
