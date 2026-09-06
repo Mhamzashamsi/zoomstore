@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Tittle from './Tittle'
 import { useContext } from 'react'
 import { shopdatacontext } from '../Context/shopcontext'
-import Card from './cardard'
+import Card from './card'
 
 function Bestseller() {
   
