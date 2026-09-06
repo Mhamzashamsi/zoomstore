@@ -60,9 +60,9 @@
 // export default contact
 
 import React from 'react'
-import Title from '../components/Tittle'
+import Title from '../Components/Tittle'
 import contactus from '../assets/contact.jpg'
-import Newletter from '../components/Newletter'
+import Newletter from '../Components/Newletter'
 
 function contact() {
   return (
