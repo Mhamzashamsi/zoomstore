@@ -4,7 +4,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import Tittle from '../Components/Tittle';
 import { shopdatacontext } from '../Context/shopcontext';
-import Card from '../Components/Card';
+import Card from '../Components/card';
 
 function Collections() {
 
