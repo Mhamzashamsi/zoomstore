@@ -1,6 +1,6 @@
 import React from 'react'
 import Tittle from '../Components/Tittle'
- import Aboutbhai from "../assets/Aboutus.jpg"
+ import Aboutbhai from "../assets/aboutus.jpg"
 import Newletter from '../Components/Newletter'
 
 function about() {
