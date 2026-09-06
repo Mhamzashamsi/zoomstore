@@ -57,7 +57,7 @@
 //   )
 // }
 
-// export default contact
+// export default contactx
 
 import React from 'react'
 import Title from '../Components/Tittle'
