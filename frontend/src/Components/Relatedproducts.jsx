@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { shopdatacontext } from '../Context/shopcontext'
 import Tittle from './Tittle'
-import Card from '../Components/Card'
+import Card from '../Components/card'
 
 
 
