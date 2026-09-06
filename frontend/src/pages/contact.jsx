@@ -1,7 +1,7 @@
 // import React from 'react'
-// import Title from '../components/Tittle'
+// import Title from '../Components/Tittle'
 // import contactus from '../assets/contact.jpg'
-// import Newletter from '../components/Newletter'
+// import Newletter from '../Components/Newletter'
 // function contact() {
 //   return (
 //     <div className='w-[99vw] min-h-[100vh] flex items-center justify-center flex-col bg-gradient-to-l from-[#141414] to-[#0c2025] gap-[50px] pt-[80px]    '  >
