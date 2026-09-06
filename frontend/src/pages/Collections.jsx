@@ -2,9 +2,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import Tittle from '../components/Tittle';
+import Tittle from '../Components/Tittle';
 import { shopdatacontext } from '../Context/shopcontext';
-import Card from '../components/Card';
+import Card from '../Components/Card';
 
 function Collections() {
 
