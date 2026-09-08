@@ -22,5 +22,8 @@
     "multer": "^2.1.1",
     "nodemon": "^3.1.11",
     "validator": "^13.15.26"
+  },
+  "devDependencies": {
+    "@vercel/node": "^12.0.1"
   }
 }
