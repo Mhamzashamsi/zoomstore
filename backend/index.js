@@ -57,7 +57,9 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://zoomstore.vercel.app"   // ✅ live frontend domain add kiya
+    "https://zoomstore.vercel.app",   // ✅ live frontend domain add kiya
+        "https://zoomstore-admin.vercel.app"
+
   ],
   credentials: true
 }));
