@@ -33,7 +33,9 @@ import { createContext, useState } from "react";
 export const AuthContext = createContext();
 
 const Authcontext = ({ children }) => {
-  const serverurl = "http://localhost:8000";
+  // const serverurl = "http://localhost:8000";
+const serverurl = "https://zoomstore-backend-jade.vercel.app";
+
   const [token, setToken] = useState(localStorage.getItem("token") || "");
 
   // ✅ userdata HATA diya — sirf Usercontext mein rahega

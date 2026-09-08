@@ -8,8 +8,10 @@ export const Authdatacontext = createContext();
 function Autncontext({children}) {
 
 
-    let serverurl = "http://localhost:8000";
-  
+    // let serverurl = "http://localhost:8000";
+let serverurl = "https://zoomstore-backend-jade.vercel.app";
+    
+
   let value ={
     serverurl
   }
